@@ -7,7 +7,7 @@ import { IAddress } from "./interface";
 function App() {
   const [input, setInput] = useState("");
   const [url, setUrl] = useState(
-    "/api/v2/country,city?apiKey=at_OtcOM1OIwD9jUkBPpMlFN44sSHATw&"
+    "https://geo.ipify.org?apiKey=at_OtcOM1OIwD9jUkBPpMlFN44sSHATw&"
   );
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState(0);

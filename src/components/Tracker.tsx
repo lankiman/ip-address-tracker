@@ -18,7 +18,7 @@ const Tracker = ({ input, setInput, setUrl }: Props) => {
     } else {
       setFormError(false);
       setUrl(
-        `/api/v2/country,city?apiKey=at_OtcOM1OIwD9jUkBPpMlFN44sSHATw&iPAddress=${input}&domain=${input}`
+        `https://geo.ipify.org?apiKey=at_OtcOM1OIwD9jUkBPpMlFN44sSHATw&iPAddress=${input}&domain=${input}`
       );
       setInput("");
     }
