@@ -5,10 +5,8 @@ export default {
   theme: {
     extend: {
       backgroundImage: {
-        mobile:
-          "url('React/ip-adress-tracker/src/assets/images/pattern-bg-mobile.png')",
-        desktop:
-          "url('React/ip-adress-tracker/src/assets/images/pattern-bg-desktop.png')"
+        mobile: "url('./src/assets/images/pattern-bg-mobile.png')",
+        desktop: "url('./src/assets/images/pattern-bg-desktop.png')"
       },
       colors: {
         DarkGray: "hsl(0, 0%, 59%)",
