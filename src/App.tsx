@@ -23,14 +23,14 @@ function App() {
         const response = await fetch(url);
         const data = await response.json();
         if (response.status === 200) {
-          console.log(data);
+          // console.log(data);
           setAddress(data);
           setLoading(false);
           setError(0);
         } else {
           setLoading(false);
           if (response.status === 403) {
-            console.log(data);
+            // console.log(data);
             setError(2);
           } else {
             setError(1);
