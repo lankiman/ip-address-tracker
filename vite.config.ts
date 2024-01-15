@@ -8,5 +8,6 @@ export default defineConfig({
   //     "/api": "https://geo.ipify.org"
   //   }
   // },
+
   plugins: [react()]
 });

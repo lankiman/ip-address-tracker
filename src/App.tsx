@@ -6,8 +6,11 @@ import { IAddress } from "./interface";
 
 function App() {
   const [input, setInput] = useState("");
+  // const [url, setUrl] = useState(
+  //   "/api/v2/country,city?apiKey=at_OtcOM1OIwD9jUkBPpMlFN44sSHATw&"
+  // );
   const [url, setUrl] = useState(
-    "https://geo.ipify.org?apiKey=at_OtcOM1OIwD9jUkBPpMlFN44sSHATw&"
+    "https://geo.ipify.org/api/v2/country,city?apiKey=at_OtcOM1OIwD9jUkBPpMlFN44sSHATw&"
   );
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState(0);
@@ -20,12 +23,14 @@ function App() {
         const response = await fetch(url);
         const data = await response.json();
         if (response.status === 200) {
+          console.log(data);
           setAddress(data);
           setLoading(false);
           setError(0);
         } else {
           setLoading(false);
           if (response.status === 403) {
+            console.log(data);
             setError(2);
           } else {
             setError(1);
